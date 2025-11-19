@@ -1,7 +1,7 @@
 from django.apps import AppConfig
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class WeatherConfig(AppConfig):
-    name = "outpost.django.weather"
+    name = __package__
     verbose_name = _("Weather")

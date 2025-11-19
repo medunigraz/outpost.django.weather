@@ -2,7 +2,6 @@ import logging
 
 import requests
 from django.contrib.gis.db import models
-from django.contrib.postgres.fields import JSONField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django_countries.fields import CountryField
@@ -19,7 +18,7 @@ class Location(models.Model):
 
     country = CountryField()
     zip_code = models.CharField(max_length=32)
-    forecast = JSONField(editable=False, null=True)
+    forecast = models.JSONField(editable=False, null=True)
     updated = models.DateTimeField(auto_now=True, editable=False)
 
     def __str__(self) -> str:
