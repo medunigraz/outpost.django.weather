@@ -6,3 +6,4 @@ from . import models
 class LocationSerializer(ModelSerializer):
     class Meta:
         model = models.Location
+        fields = "__all__"
