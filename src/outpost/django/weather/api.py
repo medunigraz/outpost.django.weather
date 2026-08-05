@@ -22,4 +22,4 @@ class LocationViewSet(ReadOnlyModelViewSet):
     serializer_class = serializers.LocationSerializer
     permission_classes = (AllowAny,)
     filter_backends = (DjangoFilterBackend,)
-    filter_class = filters.LocationFilter
+    filterset_class = filters.LocationFilter
